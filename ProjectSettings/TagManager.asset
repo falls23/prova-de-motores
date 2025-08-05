@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 3
   tags:
   - Chao
+  - wall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Inimigo
   - Water
   - UI
   - 
