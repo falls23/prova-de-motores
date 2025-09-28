@@ -519,7 +519,7 @@ Transform:
   m_GameObject: {fileID: 91720298}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.46, y: -3.28, z: 0}
+  m_LocalPosition: {x: -9.42, y: -3.22, z: 0}
   m_LocalScale: {x: 4.5, y: 4.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8751,7 +8751,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Parabens!
+  m_text: "Parab\xE9ns!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13090,7 +13090,6 @@ GameObject:
   - component: {fileID: 1756029769}
   - component: {fileID: 1756029772}
   - component: {fileID: 1756029771}
-  - component: {fileID: 1756029774}
   - component: {fileID: 1756029773}
   m_Layer: 0
   m_Name: Flag 01_0
@@ -13277,19 +13276,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nomeDaCena: Fase 2
---- !u!114 &1756029774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1756029766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32354da522ad7e44bbf2b70b1b0b8076, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoDeVitoria: {fileID: 1004962373}
 --- !u!1 &1813193357
 GameObject:
   m_ObjectHideFlags: 0
