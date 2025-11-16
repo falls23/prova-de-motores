@@ -84,7 +84,7 @@ public class InimigoVoador : MonoBehaviour
                    player.transform.position, 
                    velocidade * Time.deltaTime);
               
-               spriteRenderer.flipX = false;
+               spriteRenderer.flipX = true;
             }
             else
             //esquerda
@@ -95,7 +95,7 @@ public class InimigoVoador : MonoBehaviour
                     player.transform.position, 
                     velocidade * Time.deltaTime);
                 
-                spriteRenderer.flipX = true;
+                spriteRenderer.flipX = false;
             }
          
        
