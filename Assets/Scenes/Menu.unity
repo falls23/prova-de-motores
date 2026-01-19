@@ -2678,7 +2678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6fc3f97c33b60a4694963a28675f570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomedacena: Jogo
+  nomedacena: jogo 1
 --- !u!1 &1744277055
 GameObject:
   m_ObjectHideFlags: 0
