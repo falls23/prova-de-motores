@@ -6,8 +6,8 @@ public class player : personagem
     private SpriteRenderer spriteRenderer;
     private Animator animator;
    
-   private bool andando=false;
-   public Transform arma;
+    private bool andando=false;
+    public Transform arma;
 
 
  
@@ -70,18 +70,18 @@ public class player : personagem
             }
         }
        
+        
+     animator.SetBool("Andando", andando);
+        
     }
 
-    animator.SetBool("Andando", andando);
-    
-    
     private void OnCollisionEnter2D(Collision2D other)
     {
-       if(other.gameObject.tag == "Inimigo");
-       {
-           int vidas = Getvidas() -1;
-           Setvidas(vidas);
-       }
+        if(other.gameObject.tag == "Inimigo");
+        {
+            int vidas = Getvidas() -1;
+            Setvidas(vidas);
+        }
        
     }
     
