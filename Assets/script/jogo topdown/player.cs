@@ -1,35 +1,62 @@
-
+using System;
 using UnityEngine;
+
 public class player : personagem
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
+   
+   private bool andando=false;
+   public Transform arma;
+
+
+ 
     void Start()
     {
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        {
+        
+        {    
+            andando = false;
+
+            if (arma.rotation.eulerAngles.z > -90 && arma.rotation.eulerAngles.z < 90)
+            {
+                spriteRenderer.flipX = false;
+            }
+            
+            if (arma.rotation.eulerAngles.z > 90 && arma.rotation.eulerAngles.z < 270)
+            {
+                spriteRenderer.flipX = true;
+            }
+            
             if (Input.GetKey(KeyCode.A))
             {
-                transform.position -= new Vector3(GetVelocidade()* Time.deltaTime, 0, 0);
+                transform.position -= new Vector3(GetVelocidade()* Time.deltaTime, 0, 0); 
+                andando = true;
             }
 
             if (Input.GetKey(KeyCode.W))
             {
                 transform.position += new Vector3(0, GetVelocidade()* Time.deltaTime, 0);
+                andando = true;
             }
 
             if (Input.GetKey(KeyCode.D))
             {
                 transform.position += new Vector3(GetVelocidade()* Time.deltaTime, 0, 0);
+                andando = true;
             }
 
             if (Input.GetKey(KeyCode.S))
             {
                 transform.position -= new Vector3(0,GetVelocidade()* Time.deltaTime , 0);
+                andando = true;
             }
 
             if (Input.GetKey(KeyCode.E))
@@ -42,9 +69,12 @@ public class player : personagem
             
             }
         }
-        
+       
     }
 
+    animator.SetBool("Andando", andando);
+    
+    
     private void OnCollisionEnter2D(Collision2D other)
     {
        if(other.gameObject.tag == "Inimigo");

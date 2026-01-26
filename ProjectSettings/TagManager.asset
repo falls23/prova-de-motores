@@ -8,8 +8,8 @@ TagManager:
   - wall
   - Recurso
   - Moeda
-  - inimigo
   - Inimigo
+  - Bala
   layers:
   - Default
   - TransparentFX
