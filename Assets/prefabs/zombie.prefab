@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1525585052796268667}
   - component: {fileID: 1093963125721772201}
   - component: {fileID: 8707972335233731387}
+  - component: {fileID: 6280885156181923169}
   m_Layer: 0
   m_Name: zombie
   m_TagString: Inimigo
@@ -115,7 +116,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &8707972335233731387
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -153,3 +154,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0.016791582, y: -0.015672266}
   m_Size: {x: 0.4399953, y: 0.6786555}
   m_Direction: 0
+--- !u!114 &6280885156181923169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4311795165982521595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daae7c98b495cf44d976f55108756655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidas: 10
+  energia: 100
+  velocidade: 5

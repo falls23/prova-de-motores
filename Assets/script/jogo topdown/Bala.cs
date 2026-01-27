@@ -2,15 +2,44 @@ using UnityEngine;
 
 public class Bala : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private int dano = 1;
+    [SerializeField] private float velocidade = 1.5f;
+    
+    private SpriteRenderer m_spriteRenderer;
+    
+    public void setDano(int dano)
     {
-        
+        this.dano = dano;
     }
 
-    // Update is called once per frame
+    public int getDano()
+    {
+        return this.dano;
+    }
+    void Start()
+    {
+        m_spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    
     void Update()
     {
-        
+        transform.Translate(velocidade * Time.deltaTime, 0, 0);
+
+        if (!m_spriteRenderer.isVisible)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void OnTriggerEntre2D(Collider2D colisao)
+    {
+        if (colisao.gameObject.CompareTag("inimigo"))
+        {
+            int novaVida = colisao.gameObject.GetComponent<personagem>().Getvidas() - getDano();
+            colisao.gameObject.GetComponent<personagem>().Setvidas(novaVida);
+        }
+
+        Destroy(this.gameObject);
     }
 }
