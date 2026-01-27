@@ -38,8 +38,9 @@ public class Bala : MonoBehaviour
         {
             int novaVida = colisao.gameObject.GetComponent<personagem>().Getvidas() - getDano();
             colisao.gameObject.GetComponent<personagem>().Setvidas(novaVida);
+            Destroy(this.gameObject);
         }
 
-        Destroy(this.gameObject);
+        
     }
 }
