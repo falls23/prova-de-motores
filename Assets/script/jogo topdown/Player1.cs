@@ -9,6 +9,10 @@ public class player : personagem
     private bool andando=false;
     public Transform arma;
 
+    public  GameObject Arma1;
+    public  GameObject Arma2;
+
+
 
  
     void Start()
@@ -61,13 +65,20 @@ public class player : personagem
 
             if (Input.GetKey(KeyCode.E))
             {
-            
+            Arma1.SetActive(false);
+            Arma2.SetActive(true);
             }
 
-            if (Input.GetKey(KeyCode.K))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
-            
+            Arma1.SetActive(true);
+            Arma2.SetActive(false);
             }
+           if (Input.GetKey(KeyCode.F))
+           {
+
+           }
+
         }
        
         
@@ -75,14 +86,7 @@ public class player : personagem
         
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if(other.gameObject.tag == "Inimigo");
-        {
-            int vidas = Getvidas() -1;
-            Setvidas(vidas);
-        }
-       
+
+    
     }
     
-}

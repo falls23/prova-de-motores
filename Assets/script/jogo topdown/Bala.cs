@@ -32,15 +32,16 @@ public class Bala : MonoBehaviour
         }
     }
 
-    private void OnTriggerEntre2D(Collider2D colisao)
+    private void OnTriggerEnter2D(Collider2D colisao)
     {
-        if (colisao.gameObject.CompareTag("inimigo"))
+        if (colisao.gameObject.CompareTag("Inimigo"))
         {
-            int novaVida = colisao.gameObject.GetComponent<personagem>().Getvidas() - getDano();
-            colisao.gameObject.GetComponent<personagem>().Setvidas(novaVida);
-            Destroy(this.gameObject);
-        }
-
-        
+          //causa dano no inimigo 
+         int novaVida = colisao.gameObject.GetComponent<personagem>().Getvidas() - getDano();
+       
+         colisao.gameObject.GetComponent<personagem>().Setvidas(novaVida);       
+        } 
+       
+         Destroy(this.gameObject);
     }
 }

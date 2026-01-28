@@ -65,7 +65,7 @@ public class inimigo : personagem
             }
         }
 
-        if (getDano() <= 0)
+        if (Getvidas() <= 0)
         {
             animator.SetTrigger("Morte");
         }
@@ -79,12 +79,11 @@ public class inimigo : personagem
 
     private void OnCollisionEnter2D (Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Collider>().CompareTag("Player") && Getvidas() > 0)
+        if (collision.gameObject.CompareTag("Player") && Getvidas() > 0)
         {
             int novaVida = collision.gameObject.GetComponent<personagem>().Getvidas() - getDano();
             collision.gameObject.GetComponent<personagem>().Setvidas(novaVida);
             
-            Setvidas(0);
             
         }
     }
